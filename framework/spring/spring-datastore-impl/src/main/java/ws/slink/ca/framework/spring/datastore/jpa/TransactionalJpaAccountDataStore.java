@@ -65,9 +65,7 @@ public class TransactionalJpaAccountDataStore {
     public <T> T transactional(Callable<T> callable) {
         try {
             return callable.call();
-        } catch(DomainException | UseCaseException e) {
-            throw e;
-        } catch(DataStoreException e) {
+        } catch(DomainException | UseCaseException | DataStoreException e) {
             throw e;
         } catch (Exception e) {
             throw new RuntimeException(e);
