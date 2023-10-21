@@ -1,0 +1,40 @@
+logging:
+  level:
+    org.springframework.orm.jpa: INFO
+    org.springframework.transaction: INFO
+    org.hibernate: OFF
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    #Open every session in its own view
+    open-in-view: false
+#    properties:
+#      hibernate:
+#        ddl-auto: 
+#        Time zone defined for DB
+#        jdbc.time_zone: UTC
+  datasource:
+    #DB user
+    username: ***REMOVED***
+    #DB password
+    password: ***REMOVED***
+    #URL to connect to DB
+    url: "jdbc:postgresql://localhost:5432/***REMOVED***"
+    hikari:
+      minimum-idle: 5
+      maximum-pool-size: 10
+#  r2dbc:
+#    #    prefix: r2dbc:pool:postgresql://
+#    url: "r2dbc:postgresql://${PG_HOST}:${PG_PORT}/${PG_DB}?schema=${spring.r2dbc.properties.schema}"  #?schema=${spring.r2dbc.schema}&ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory
+#    username: ${PG_USER}
+#    password: ${PG_PASS}
+#    pool:
+#      enabled: true
+#      initial-size: 5
+#      max-size: 10
+#  liquibase:
+#    url: "jdbc:postgresql://${PG_HOST}:${PG_PORT}/${PG_DB}"   #?ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory
+#    user: ${PG_USER}
+#    password: ${PG_PASS}
