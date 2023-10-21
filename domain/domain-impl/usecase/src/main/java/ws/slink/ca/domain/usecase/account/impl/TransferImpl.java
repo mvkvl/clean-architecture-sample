@@ -25,7 +25,7 @@ public class TransferImpl extends AbstractAccountUseCase implements Transfer {
             getEntity(accountIdFrom);
             getEntity(accountIdTo);
 
-            // try toi lock for update
+            // try to lock for update
             Account accountFrom = checkBalance(getEntityForUpdate(accountIdFrom), amount);
             Account accountTo = getEntityForUpdate(accountIdTo);
 

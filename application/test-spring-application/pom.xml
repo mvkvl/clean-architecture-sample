@@ -33,12 +33,6 @@
         </dependency>
         <dependency>
             <groupId>ws.slink.ca</groupId>
-            <artifactId>spring-transaction-impl</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>ws.slink.ca</groupId>
             <artifactId>domain-entity</artifactId>
             <version>1.0-SNAPSHOT</version>
             <scope>compile</scope>

@@ -17,7 +17,7 @@ public interface JpaAccountRepository extends JpaRepository<AccountEntity, Long>
 
     @Lock(LockModeType.WRITE)
 //    @QueryHints(@QueryHint(name = AvailableSettings.JPA_LOCK_TIMEOUT, value = "" + LockOptions.SKIP_LOCKED))
-    @QueryHints(@QueryHint(name = AvailableSettings.JAKARTA_LOCK_TIMEOUT, value = "500"))
+    @QueryHints(@QueryHint(name = AvailableSettings.JAKARTA_LOCK_TIMEOUT, value = "250"))
 //    @NamedQuery(
 //        name="lockPersonQuery",
 //        query="SELECT p FROM Person p WHERE p.name LIKE :name",

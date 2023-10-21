@@ -1,6 +1,6 @@
 package ws.slink.ca.domain.usecase.account;
 
-import ws.slink.api.interactor.AccountService;
+import ws.slink.api.interactor.AccountActor;
 import ws.slink.ca.api.datastore.DataStore;
 import ws.slink.ca.domain.entity.Account;
 import ws.slink.ca.domain.usecase.account.impl.AddImpl;
@@ -11,11 +11,11 @@ import ws.slink.ca.domain.usecase.account.impl.TransferImpl;
 
 import java.util.List;
 
-public class AccountServiceImpl implements AccountService {
+public class AccountActorImpl implements AccountActor {
 
     private final DataStore<Long, Account> dataStore;
 
-    public AccountServiceImpl(final DataStore<Long, Account> dataStore) {
+    public AccountActorImpl(final DataStore<Long, Account> dataStore) {
         this.dataStore = dataStore;
     }
 

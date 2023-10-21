@@ -4,7 +4,7 @@ import ws.slink.ca.domain.entity.Account;
 
 import java.util.List;
 
-public interface AccountService {
+public interface AccountActor {
 
     Account find(Long accountId);
     List<Account> list();
