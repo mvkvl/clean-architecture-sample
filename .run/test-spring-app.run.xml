@@ -2,7 +2,7 @@
   <configuration default="false" name="test-spring-app" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
     <module name="test-spring-application" />
     <option name="SPRING_BOOT_MAIN_CLASS" value="ws.slink.ca.application.TestSpringApplication" />
-    <option name="VM_PARAMETERS" value="--add-reads=test_app_string_jpa=ALL-UNNAMED" />
+    <option name="VM_PARAMETERS" value="--add-reads=test.app.spring.jpa=ALL-UNNAMED" />
     <extension name="coverage">
       <pattern>
         <option name="PATTERN" value="ws.slink.ca.application.*" />

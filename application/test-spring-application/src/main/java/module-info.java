@@ -1,4 +1,4 @@
-module test_app_string_jpa {
+module test.app.spring.jpa {
 
     requires domain_entity;
     requires usecase_api;
