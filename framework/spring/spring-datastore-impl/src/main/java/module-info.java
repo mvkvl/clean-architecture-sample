@@ -3,8 +3,9 @@ module datastore_spring_jpa {
     // required in compile time
     requires domain_entity;
     requires usecase_api;
-    requires usecase;
     requires datastore_api;
+    requires usecase;
+
     requires org.slf4j;
     requires spring.data.jpa;
     requires spring.beans;
