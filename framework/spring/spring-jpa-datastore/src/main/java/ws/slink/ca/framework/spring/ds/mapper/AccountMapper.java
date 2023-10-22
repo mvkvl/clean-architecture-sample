@@ -1,7 +1,7 @@
-package ws.slink.ca.framework.spring.datastore.mapper;
+package ws.slink.ca.framework.spring.ds.mapper;
 
 import ws.slink.ca.domain.entity.Account;
-import ws.slink.ca.framework.spring.datastore.entity.AccountEntity;
+import ws.slink.ca.framework.spring.ds.entity.AccountEntity;
 
 public class AccountMapper {
 

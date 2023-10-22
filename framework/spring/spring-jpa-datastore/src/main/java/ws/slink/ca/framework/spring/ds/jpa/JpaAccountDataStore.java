@@ -1,4 +1,4 @@
-package ws.slink.ca.framework.spring.datastore.jpa;
+package ws.slink.ca.framework.spring.ds.jpa;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.CannotAcquireLockException;

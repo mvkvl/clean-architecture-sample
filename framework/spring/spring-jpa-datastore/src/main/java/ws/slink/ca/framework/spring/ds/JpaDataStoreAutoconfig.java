@@ -1,4 +1,4 @@
-package ws.slink.ca.framework.spring.datastore;
+package ws.slink.ca.framework.spring.ds;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -7,9 +7,10 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
-import ws.slink.ca.framework.spring.datastore.jpa.JpaAccountDataStore;
-import ws.slink.ca.framework.spring.datastore.jpa.JpaAccountRepository;
-import ws.slink.ca.framework.spring.datastore.jpa.TransactionalJpaAccountDataStore;
+import ws.slink.ca.api.datastore.AccountDataStore;
+import ws.slink.ca.framework.spring.ds.jpa.JpaAccountDataStore;
+import ws.slink.ca.framework.spring.ds.jpa.JpaAccountRepository;
+import ws.slink.ca.framework.spring.ds.jpa.TransactionalJpaAccountDataStore;
 
 @Configuration
 @EnableJpaRepositories
@@ -25,7 +26,7 @@ public class JpaDataStoreAutoconfig {
 
     @Bean
     @Qualifier("jpa")
-    JpaAccountDataStore jpaAccountDataStore(TransactionalJpaAccountDataStore txAccountDS) {
+    AccountDataStore jpaAccountDataStore(TransactionalJpaAccountDataStore txAccountDS) {
         LOG.info("Instantiating jpa account data store");
         return new JpaAccountDataStore(txAccountDS);
     }

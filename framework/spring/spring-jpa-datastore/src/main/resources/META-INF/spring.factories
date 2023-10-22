@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  ws.slink.ca.framework.spring.datastore.JpaDataStoreAutoconfig
+  ws.slink.ca.framework.spring.ds.JpaDataStoreAutoconfig

@@ -1,4 +1,4 @@
-package ws.slink.ca.framework.spring.datastore.entity;
+package ws.slink.ca.framework.spring.ds.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

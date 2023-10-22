@@ -1,0 +1,20 @@
+version: "3.3"
+
+services:
+  postgres:
+    image: postgres:10
+    container_name: ca_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: test
+      POSTGRES_PASSWORD: test
+      POSTGRES_DB: test
+    volumes:
+      - ${PWD}/init-db:/docker-entrypoint-initdb.d:ro
+      - pg-data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+volumes:
+  pg-data:
+    external: false

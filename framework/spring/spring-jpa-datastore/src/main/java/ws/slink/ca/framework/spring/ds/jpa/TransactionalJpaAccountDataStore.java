@@ -1,4 +1,4 @@
-package ws.slink.ca.framework.spring.datastore.jpa;
+package ws.slink.ca.framework.spring.ds.jpa;
 
 import org.hibernate.exception.LockAcquisitionException;
 import org.slf4j.Logger;
@@ -14,7 +14,7 @@ import ws.slink.ca.api.exception.account.AccountNotFoundException;
 import ws.slink.ca.api.datastore.exception.AccountLockException;
 import ws.slink.ca.api.exception.UseCaseException;
 import ws.slink.ca.domain.exception.UncheckedException;
-import ws.slink.ca.framework.spring.datastore.mapper.AccountMapper;
+import ws.slink.ca.framework.spring.ds.mapper.AccountMapper;
 
 import java.util.Comparator;
 import java.util.List;

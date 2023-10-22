@@ -8,6 +8,9 @@ spring:
   jpa:
     hibernate:
       ddl-auto: create-drop
+    properties:
+      hibernate:
+        default_schema: spring_jpa
     open-in-view: false
   datasource:
     username: test

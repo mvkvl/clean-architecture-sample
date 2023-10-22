@@ -15,7 +15,7 @@ module datastore_spring_jpa {
     requires jakarta.persistence;
 
     // opened in run time
-    opens ws.slink.ca.framework.spring.datastore;
-    opens ws.slink.ca.framework.spring.datastore.jpa;
+    opens ws.slink.ca.framework.spring.ds;
+    opens ws.slink.ca.framework.spring.ds.jpa;
 
 }

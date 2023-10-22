@@ -1,4 +1,4 @@
-package ws.slink.ca.framework.spring.datastore.jpa;
+package ws.slink.ca.framework.spring.ds.jpa;
 
 import jakarta.persistence.LockModeType;
 import jakarta.persistence.QueryHint;
@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Lock;
 import org.springframework.data.jpa.repository.QueryHints;
 import org.springframework.stereotype.Repository;
-import ws.slink.ca.framework.spring.datastore.entity.AccountEntity;
+import ws.slink.ca.framework.spring.ds.entity.AccountEntity;
 
 import java.util.Optional;
 
