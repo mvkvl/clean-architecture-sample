@@ -1,7 +1,7 @@
 package ws.slink.ca.domain.usecase.account.impl;
 
-import ws.slink.api.usecase.account.Transfer;
-import ws.slink.ca.api.datastore.DataStore;
+import ws.slink.ca.api.datastore.AccountDataStore;
+import ws.slink.ca.api.usecase.account.Transfer;
 import ws.slink.ca.domain.entity.Account;
 import ws.slink.ca.domain.usecase.account.AbstractAccountUseCase;
 
@@ -9,9 +9,9 @@ import java.util.List;
 
 public class TransferImpl extends AbstractAccountUseCase implements Transfer {
 
-    private final DataStore<Long, Account> dataStore;
+    private final AccountDataStore dataStore;
 
-    public TransferImpl(DataStore<Long, Account> dataStore) {
+    public TransferImpl(AccountDataStore dataStore) {
         super(dataStore);
         this.dataStore = dataStore;
     }

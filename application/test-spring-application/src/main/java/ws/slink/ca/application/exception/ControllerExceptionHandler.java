@@ -6,10 +6,10 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import ws.slink.ca.api.exception.account.AccountNotFoundException;
+import ws.slink.ca.api.exception.account.InvalidBalanceException;
 import ws.slink.ca.domain.exception.InvalidAccountIdException;
 import ws.slink.ca.domain.exception.NegativeAmountException;
-import ws.slink.ca.domain.usecase.account.exception.AccountNotFoundException;
-import ws.slink.ca.domain.usecase.account.exception.InvalidBalanceException;
 
 import java.util.Map;
 

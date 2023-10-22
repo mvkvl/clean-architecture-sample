@@ -1,15 +1,15 @@
 package ws.slink.ca.domain.usecase.account.impl;
 
-import ws.slink.api.usecase.account.Deduct;
-import ws.slink.ca.api.datastore.DataStore;
+import ws.slink.ca.api.datastore.AccountDataStore;
+import ws.slink.ca.api.usecase.account.Deduct;
 import ws.slink.ca.domain.entity.Account;
 import ws.slink.ca.domain.usecase.account.AbstractAccountUseCase;
 
 public class DeductImpl extends AbstractAccountUseCase implements Deduct {
 
-    private final DataStore<Long, Account> dataStore;
+    private final AccountDataStore dataStore;
 
-    public DeductImpl(DataStore<Long, Account> dataStore) {
+    public DeductImpl(AccountDataStore dataStore) {
         super(dataStore);
         this.dataStore = dataStore;
     }

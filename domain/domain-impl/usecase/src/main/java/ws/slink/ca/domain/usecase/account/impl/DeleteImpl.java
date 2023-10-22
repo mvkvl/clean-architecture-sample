@@ -1,14 +1,13 @@
 package ws.slink.ca.domain.usecase.account.impl;
 
-import ws.slink.api.usecase.account.Delete;
-import ws.slink.ca.api.datastore.DataStore;
-import ws.slink.ca.domain.entity.Account;
+import ws.slink.ca.api.datastore.AccountDataStore;
+import ws.slink.ca.api.usecase.account.Delete;
 
 public class DeleteImpl implements Delete {
 
-    private final DataStore<Long, Account> dataStore;
+    private final AccountDataStore dataStore;
 
-    public DeleteImpl(DataStore<Long, Account> dataStore) {
+    public DeleteImpl(AccountDataStore dataStore) {
         this.dataStore = dataStore;
     }
 

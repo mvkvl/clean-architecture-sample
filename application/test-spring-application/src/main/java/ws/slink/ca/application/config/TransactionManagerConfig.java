@@ -1,14 +1,14 @@
 package ws.slink.ca.application.config;
 
 //import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
+//import org.springframework.context.annotation.Configuration;
 //import ws.slink.ca.api.transaction.TransactionManager;
 //import ws.slink.ca.framework.spring.transaction.SpringDataJpaTransactionManager;
 
 //import java.sql.Connection;
 //import java.util.function.Supplier;
 
-@Configuration
+//@Configuration
 public class TransactionManagerConfig {
 
 //    private final Supplier<Connection> connectionProvider;

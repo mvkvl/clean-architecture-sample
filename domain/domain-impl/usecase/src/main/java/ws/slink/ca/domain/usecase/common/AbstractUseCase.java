@@ -1,7 +1,7 @@
 package ws.slink.ca.domain.usecase.common;
 
-import ws.slink.ca.api.datastore.DataStore;
-import ws.slink.ca.domain.usecase.account.exception.EntityNotFoundException;
+import ws.slink.ca.api.datastore.common.DataStore;
+import ws.slink.ca.api.exception.account.EntityNotFoundException;
 
 public class AbstractUseCase<K, V> {
 
@@ -11,6 +11,7 @@ public class AbstractUseCase<K, V> {
         this.dataStore = dataStore;
     }
 
+    @SuppressWarnings("UnusedReturnValue")
     protected V getEntity(K id) {
         V entity = dataStore.get(id);
         if (entity == null) {

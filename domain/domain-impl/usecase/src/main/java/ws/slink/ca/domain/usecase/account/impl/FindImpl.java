@@ -1,14 +1,14 @@
 package ws.slink.ca.domain.usecase.account.impl;
 
-import ws.slink.api.usecase.account.Find;
-import ws.slink.ca.api.datastore.DataStore;
+import ws.slink.ca.api.datastore.AccountDataStore;
+import ws.slink.ca.api.usecase.account.Find;
 import ws.slink.ca.domain.entity.Account;
 
 public class FindImpl implements Find {
 
-    private final DataStore<Long, Account> dataStore;
+    private final AccountDataStore dataStore;
 
-    public FindImpl(DataStore<Long, Account> dataStore) {
+    public FindImpl(AccountDataStore dataStore) {
         this.dataStore = dataStore;
     }
 

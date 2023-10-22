@@ -1,16 +1,16 @@
 package ws.slink.ca.application.config;
 
-import com.zaxxer.hikari.HikariDataSource;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import ws.slink.ca.application.exception.UncheckedSQLException;
+//import com.zaxxer.hikari.HikariDataSource;
+//import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.context.annotation.Bean;
+//import org.springframework.context.annotation.Configuration;
+//import ws.slink.ca.application.exception.UncheckedSQLException;
+//
+//import java.sql.Connection;
+//import java.sql.SQLException;
+//import java.util.function.Supplier;
 
-import java.sql.Connection;
-import java.sql.SQLException;
-import java.util.function.Supplier;
-
-@Configuration
+//@Configuration
 public class DatabaseConnectionProviderConfig {
 
 //    private final HikariDataSource hikari;

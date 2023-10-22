@@ -10,11 +10,10 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import ws.slink.ca.api.presentator.AccountListPresentator;
+import ws.slink.ca.api.presentator.AccountPresentator;
 import ws.slink.ca.application.service.AccountServiceFacade;
 import ws.slink.ca.domain.entity.Account;
-import ws.slink.ca.domain.presentator.SimpleAccountPresentator;
-import ws.slink.ca.domain.presentator.StringAccountListPresentator;
-import ws.slink.ca.domain.presentator.StringAccountPresentator;
 
 import java.util.List;
 import java.util.Map;
@@ -26,9 +25,9 @@ import java.util.Objects;
 public class AccountController {
 
     private final AccountServiceFacade accounts;
-    private final SimpleAccountPresentator simplePresentator;
-    private final StringAccountPresentator stringPresentator;
-    private final StringAccountListPresentator stringListPresentator;
+    private final AccountPresentator<String> stringPresentator;
+    private final AccountPresentator<Map<String, String>> simplePresentator;
+    private final AccountListPresentator<String> stringListPresentator;
 
     @GetMapping("")
     public Object list(@RequestParam(value = "presentation", required = false) String presentation) {

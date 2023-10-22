@@ -4,7 +4,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import ws.slink.api.interactor.AccountActor;
+import ws.slink.ca.api.actor.AccountActor;
 import ws.slink.ca.domain.entity.Account;
 
 import java.util.List;

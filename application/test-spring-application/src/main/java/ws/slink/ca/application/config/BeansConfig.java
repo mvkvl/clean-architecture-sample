@@ -2,25 +2,33 @@ package ws.slink.ca.application.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import ws.slink.ca.domain.presentator.SimpleAccountPresentator;
-import ws.slink.ca.domain.presentator.StringAccountListPresentator;
-import ws.slink.ca.domain.presentator.StringAccountPresentator;
+import ws.slink.ca.api.presentator.AccountListPresentator;
+import ws.slink.ca.api.presentator.AccountPresentator;
+import ws.slink.ca.domain.presentator.AccountPresentatorFactory;
+import ws.slink.ca.domain.presentator.PresentatorType;
+
+import java.util.Map;
 
 @Configuration
+@SuppressWarnings("unchecked")
 public class BeansConfig {
 
     @Bean
-    SimpleAccountPresentator simpleAccountPresentator() {
-        return new SimpleAccountPresentator();
-    }
-    @Bean
-    StringAccountPresentator stringAccountPresentator() {
-        return new StringAccountPresentator();
+    AccountPresentatorFactory accountPresentatorFactory() {
+        return new AccountPresentatorFactory();
     }
 
     @Bean
-    StringAccountListPresentator stringAccountListPresentator() {
-        return new StringAccountListPresentator();
+    AccountPresentator<String> stringAccountPresentator() {
+        return accountPresentatorFactory().createItemPresentator(PresentatorType.STRING);
+    }
+    @Bean
+    AccountPresentator<Map<String, String>> simpleAccountPresentator() {
+        return accountPresentatorFactory().createItemPresentator(PresentatorType.SIMPLE);
+    }
+    @Bean
+    AccountListPresentator<String> stringListAccountPresentator() {
+        return accountPresentatorFactory().createCollectionPresentator(PresentatorType.STRING_LIST);
     }
 
 }

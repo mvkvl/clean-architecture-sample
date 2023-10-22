@@ -10,9 +10,10 @@ import org.springframework.transaction.annotation.Transactional;
 import ws.slink.ca.api.datastore.exception.DataStoreException;
 import ws.slink.ca.domain.entity.Account;
 import ws.slink.ca.domain.exception.DomainException;
-import ws.slink.ca.domain.usecase.account.exception.AccountNotFoundException;
+import ws.slink.ca.api.exception.account.AccountNotFoundException;
 import ws.slink.ca.api.datastore.exception.AccountLockException;
-import ws.slink.ca.domain.usecase.common.exception.UseCaseException;
+import ws.slink.ca.api.exception.UseCaseException;
+import ws.slink.ca.domain.exception.UncheckedException;
 import ws.slink.ca.framework.spring.datastore.mapper.AccountMapper;
 
 import java.util.Comparator;
@@ -22,7 +23,8 @@ import java.util.concurrent.Callable;
 
 public class TransactionalJpaAccountDataStore {
 
-    Logger LOG = LoggerFactory.getLogger(TransactionalJpaAccountDataStore.class);
+    @SuppressWarnings("unused")
+    private static final Logger LOG = LoggerFactory.getLogger(TransactionalJpaAccountDataStore.class);
 
     private final JpaAccountRepository repository;
 
@@ -68,7 +70,7 @@ public class TransactionalJpaAccountDataStore {
         } catch(DomainException | UseCaseException | DataStoreException e) {
             throw e;
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            throw new UncheckedException(e);
         }
     }
 
