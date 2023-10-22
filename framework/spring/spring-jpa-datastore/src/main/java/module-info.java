@@ -1,15 +1,15 @@
-module datastore_spring_jpa {
+module datastore.spring.jpa {
 
     // required in compile time
-    requires domain_entity;
-    requires usecase_api;
-    requires datastore_api;
-    requires usecase;
+    requires domain.entity;
+    requires api.datastore;
+    requires api.usecase;
 
     requires org.slf4j;
     requires spring.data.jpa;
     requires spring.beans;
     requires spring.tx;
+    requires spring.boot.autoconfigure;
     requires spring.context;
     requires org.hibernate.orm.core;
     requires jakarta.persistence;

@@ -76,7 +76,7 @@ public class ConcurrencyTestService {
                 try {
                     accounts.transfer(from, to, 10.0);
                 } catch(DataStoreException e) {
-                    log.debug("exception {} in {}: {}", e.getClass().getSimpleName(), name, e.getMessage());
+                    log.info("exception {} in {}: {}", e.getClass().getSimpleName(), name, e.getMessage());
                 } catch (Exception e) {
                     log.warn("exception {} in {}: {}", e.getClass().getSimpleName(), name, e.getMessage());
                 }

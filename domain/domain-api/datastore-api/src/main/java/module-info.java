@@ -1,7 +1,7 @@
-module datastore_api {
+module api.datastore {
 
     // required in compile time
-    requires domain_entity;
+    requires domain.entity;
 
     // exported in compile time
     exports ws.slink.ca.api.datastore;

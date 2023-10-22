@@ -1,8 +1,8 @@
 module presentator {
 
     // required in compile time
-    requires domain_entity;
-    requires presentator_api;
+    requires domain.entity;
+    requires api.presentator;
 
     // exported in compile time
     exports ws.slink.ca.domain.presentator;

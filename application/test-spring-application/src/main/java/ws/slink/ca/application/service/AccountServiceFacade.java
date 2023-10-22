@@ -17,27 +17,27 @@ public class AccountServiceFacade {
     private final AccountActor accounts;
 
     public List<Account> list() {
-        log.warn("list accounts");
+        log.debug("list accounts");
         return accounts.list();
     }
     public Account find(Long id) {
-        log.warn("find account #{}", id);
+        log.debug("find account #{}", id);
         return accounts.find(id);
     }
     public Account add(Long id, Double amount) {
-        log.warn("add {} to account #{}", amount, id);
+        log.debug("add {} to account #{}", amount, id);
         return accounts.add(id, amount);
     }
     public Account deduct(Long id, Double amount) {
-        log.warn("deduct {} from account #{}", amount, id);
+        log.debug("deduct {} from account #{}", amount, id);
         return accounts.deduct(id, amount);
     }
     public Account create(Double balance) {
-        log.warn("create account with initial balance {}", balance);
+        log.debug("create account with initial balance {}", balance);
         return accounts.create(balance);
     }
     public void delete(Long id) {
-        log.warn("delete account #{}", id);
+        log.debug("delete account #{}", id);
         accounts.delete(id);
     }
 

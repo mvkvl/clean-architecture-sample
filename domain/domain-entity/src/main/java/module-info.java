@@ -1,4 +1,4 @@
-module domain_entity {
+module domain.entity {
 
     // exported in compile time
     exports ws.slink.ca.domain.entity;

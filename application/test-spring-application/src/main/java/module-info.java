@@ -1,9 +1,9 @@
 module test.app.spring.jpa {
 
-    requires domain_entity;
-    requires usecase_api;
-    requires presentator_api;
-    requires datastore_api;
+    requires domain.entity;
+    requires api.usecase;
+    requires api.presentator;
+    requires api.datastore;
     requires presentator;
     requires usecase;
 
@@ -17,6 +17,8 @@ module test.app.spring.jpa {
     requires org.slf4j;
     requires java.sql;
     requires lombok;
+
+    requires datastore.java.inmem;
 
     opens ws.slink.ca.application;
     opens ws.slink.ca.application.config;

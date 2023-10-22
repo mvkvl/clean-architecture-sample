@@ -1,7 +1,7 @@
 package ws.slink.ca.domain.usecase.account;
 
 import ws.slink.ca.api.datastore.AccountDataStore;
-import ws.slink.ca.api.exception.account.InvalidBalanceException;
+import ws.slink.ca.api.exception.account.InsufficientBalanceException;
 import ws.slink.ca.domain.entity.Account;
 import ws.slink.ca.domain.exception.NegativeAmountException;
 import ws.slink.ca.domain.usecase.common.AbstractUseCase;
@@ -14,7 +14,7 @@ public class AbstractAccountUseCase extends AbstractUseCase<Long, Account> {
 
     protected Account checkBalance(Account account, double amount) {
         if (account.getBalance() < amount) {
-            throw new InvalidBalanceException();
+            throw new InsufficientBalanceException(account.getId(), account.getBalance());
         }
         return account;
     }

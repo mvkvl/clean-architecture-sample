@@ -54,6 +54,11 @@
             <artifactId>presentator</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
+        <dependency>
+            <groupId>ws.slink.ca</groupId>
+            <artifactId>in-memory-datastore</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
     </dependencies>
 
 </project>

@@ -7,7 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import ws.slink.ca.api.exception.account.AccountNotFoundException;
-import ws.slink.ca.api.exception.account.InvalidBalanceException;
+import ws.slink.ca.api.exception.account.InsufficientBalanceException;
 import ws.slink.ca.domain.exception.InvalidAccountIdException;
 import ws.slink.ca.domain.exception.NegativeAmountException;
 
@@ -18,7 +18,7 @@ import java.util.Map;
 public class ControllerExceptionHandler {
 
     @ExceptionHandler({
-        InvalidBalanceException.class,
+        InsufficientBalanceException.class,
         AccountNotFoundException.class,
         InvalidAccountIdException.class,
         NegativeAmountException.class

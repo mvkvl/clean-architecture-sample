@@ -4,6 +4,12 @@ logging:
     org.springframework.transaction: INFO
     org.hibernate: OFF
 
+ca:
+  account:
+    datastore:
+#      type: jpa
+      type: inmem
+
 spring:
   jpa:
     hibernate:

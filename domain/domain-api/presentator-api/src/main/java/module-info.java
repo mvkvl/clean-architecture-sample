@@ -1,7 +1,7 @@
-module presentator_api {
+module api.presentator {
 
     // required in compile time
-    requires domain_entity;
+    requires domain.entity;
 
     // exported in compile time
     exports ws.slink.ca.api.presentator;
