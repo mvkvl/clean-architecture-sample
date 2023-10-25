@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import ws.slink.ca.api.presentator.AccountListPresentator;
 import ws.slink.ca.api.presentator.AccountPresentator;
-import ws.slink.ca.application.service.AccountServiceFacade;
+import ws.slink.ca.application.service.AccountService;
 import ws.slink.ca.domain.entity.Account;
 
 import java.util.List;
@@ -24,7 +24,7 @@ import java.util.Objects;
 @RequestMapping(value = "/api/account", produces = MediaType.APPLICATION_JSON_VALUE)
 public class AccountController {
 
-    private final AccountServiceFacade accounts;
+    private final AccountService accounts;
     private final AccountPresentator<String> stringPresentator;
     private final AccountPresentator<Map<String, String>> simplePresentator;
     private final AccountListPresentator<String> stringListPresentator;

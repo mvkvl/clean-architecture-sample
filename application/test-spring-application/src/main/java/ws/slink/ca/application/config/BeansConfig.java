@@ -29,6 +29,7 @@ import java.util.Map;
 @SuppressWarnings("unchecked")
 public class BeansConfig {
 
+    // Add support for property-based qualifiers
     @Component
     public static class AutowireCandidateResolverConfigurer implements BeanFactoryPostProcessor {
         private static class EnvironmentAwareQualifierAnnotationAutowireCandidateResolver extends QualifierAnnotationAutowireCandidateResolver {

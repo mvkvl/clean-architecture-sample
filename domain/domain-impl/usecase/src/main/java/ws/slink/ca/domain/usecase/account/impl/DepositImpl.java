@@ -1,15 +1,15 @@
 package ws.slink.ca.domain.usecase.account.impl;
 
 import ws.slink.ca.api.datastore.AccountDataStore;
-import ws.slink.ca.api.usecase.account.Add;
+import ws.slink.ca.api.usecase.account.Deposit;
 import ws.slink.ca.domain.entity.Account;
 import ws.slink.ca.domain.usecase.account.AbstractAccountUseCase;
 
-public class AddImpl extends AbstractAccountUseCase implements Add {
+public class DepositImpl extends AbstractAccountUseCase implements Deposit {
 
     private final AccountDataStore dataStore;
 
-    public AddImpl(AccountDataStore dataStore) {
+    public DepositImpl(AccountDataStore dataStore) {
         super(dataStore);
         this.dataStore = dataStore;
     }

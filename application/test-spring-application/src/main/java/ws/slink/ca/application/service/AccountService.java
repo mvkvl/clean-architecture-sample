@@ -4,7 +4,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import ws.slink.ca.api.actor.AccountActor;
+import ws.slink.ca.api.usecase.Accounts;
 import ws.slink.ca.domain.entity.Account;
 
 import java.util.List;
@@ -12,9 +12,9 @@ import java.util.List;
 @Slf4j
 @Service
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))
-public class AccountServiceFacade {
+public class AccountService {
 
-    private final AccountActor accounts;
+    private final Accounts accounts;
 
     public List<Account> list() {
         log.debug("list accounts");
@@ -26,7 +26,7 @@ public class AccountServiceFacade {
     }
     public Account add(Long id, Double amount) {
         log.debug("add {} to account #{}", amount, id);
-        return accounts.add(id, amount);
+        return accounts.deposit(id, amount);
     }
     public Account deduct(Long id, Double amount) {
         log.debug("deduct {} from account #{}", amount, id);

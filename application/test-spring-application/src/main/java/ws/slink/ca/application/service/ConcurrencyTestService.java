@@ -16,7 +16,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))
 public class ConcurrencyTestService {
 
-    private final AccountServiceFacade accounts;
+    private final AccountService accounts;
 
     private final AtomicBoolean flag1 = new AtomicBoolean(false);
     private final AtomicBoolean flag2 = new AtomicBoolean(false);
